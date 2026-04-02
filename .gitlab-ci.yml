@@ -1,0 +1,24 @@
+image: node:14.6-alpine
+
+stages:
+  - test
+
+before_script:
+  - npm install
+
+test-node-14-6:
+  stage: test
+  script:
+    - npm test
+
+test-node-lts:
+  image: node:lts-alpine
+  stage: test
+  script:
+    - npm test
+
+test-node-current:
+  image: node:current-alpine
+  stage: test
+  script:
+    - npm test
