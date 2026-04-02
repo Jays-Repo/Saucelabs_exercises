@@ -3,3 +3,6 @@ The following files were modified:
   brokenSauce.js
   workignSauce.js
 
+Commands used to run tests in test directory:
+npx mocha test/workingSauce.js
+npx mocha test/brokenSauce.js
