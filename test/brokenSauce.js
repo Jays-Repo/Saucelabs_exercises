@@ -4,9 +4,6 @@ const chrome = require('selenium-webdriver/chrome');
 
 const SAUCE_USERNAME = process.env.SAUCE_USERNAME;
 const SAUCE_ACCESS_KEY = process.env.SAUCE_ACCESS_KEY;
-console.log(SAUCE_USERNAME);
-console.log(SAUCE_ACCESS_KEY);
-console.log("test");
 const ONDEMAND_URL = `https://${SAUCE_USERNAME}:${SAUCE_ACCESS_KEY}@ondemand.us-west-1.saucelabs.com:443/wd/hub`;
 // NOTE: Use the URL below if using our EU datacenter (e.g. logged in to app.eu-central-1.saucelabs.com)
 // const ONDEMAND_URL = `https://${SAUCE_USERNAME}:${SAUCE_ACCESS_KEY}@ondemand.eu-central-1.saucelabs.com:443/wd/hub`;

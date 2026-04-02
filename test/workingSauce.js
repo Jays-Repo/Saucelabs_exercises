@@ -6,9 +6,6 @@ const { text } = require('stream/consumers');
 
 const SAUCE_USERNAME = process.env.SAUCE_USERNAME;
 const SAUCE_ACCESS_KEY = process.env.SAUCE_ACCESS_KEY;
-console.log(SAUCE_USERNAME);
-console.log(SAUCE_ACCESS_KEY);
-console.log("test test 123");
 const client = new SauceLabs({
     user: SAUCE_USERNAME,
     key: SAUCE_ACCESS_KEY
