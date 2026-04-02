@@ -33,13 +33,14 @@ describe('Broken Sauce', function () {
             // will have to code around that or use the us-west-1 datacenter.
             // You can investigate the modal elements using a Live Test(https://app.saucelabs.com/live/web-testing)
 
-
+            //Here I changed to search by title
             let search = await driver.findElement(By.css('[title="Search"]'));
             await search.sendKeys("Sauce Labs");
 
             let button = await driver.findElement(By.name("btnK"))
             await button.click()
 
+            //here I changed what we were searching for, 'sauce' was not the correct text string
             let page = await driver.findElement(By.partialLinkText("Sauce Labs: Cross Browser Testing, Selenium Testing ..."));
             await page.click();
 
