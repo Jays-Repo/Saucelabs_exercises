@@ -6,3 +6,5 @@ The following files were modified:
 Commands used to run tests in test directory:
 npx mocha test/workingSauce.js
 npx mocha test/brokenSauce.js
+
+Saucelabs Username: oauth-jay.gonzalez0906-323e7
