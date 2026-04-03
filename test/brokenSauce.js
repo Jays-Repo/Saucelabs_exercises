@@ -44,6 +44,23 @@ describe('Broken Sauce', function () {
             let page = await driver.findElement(By.partialLinkText("Sauce Labs: Cross Browser Testing, Selenium Testing ..."));
             await page.click();
 
+            //Hover action goes here
+            //I cannot use this css locator, due to the fact that this occurs 4 times throughout the webpage
+            // let developersTab = await driver.findElement(By.css(".navMenuLabel.MuiBox-root.css-0"));
+            //xpath option, more clear, will take longer but will for sure find correct element to hover
+            let developersTab = await driver.findElement(
+                By.xpath("//*[contains(@class, 'navDropdown-text') and .//div[text()='Developers']]")
+            );
+            const actions = driver.actions({ async: true });
+            await actions.move({ origin: developersTab }).perform();
+
+            //Navigate to documents after hovering
+            let devDocumentation = await driver.findElement(
+                By.css("a[href='https://docs.saucelabs.com/']"));
+            await devDocumentation.click();
+
+            //the page opens on a new tab, which is why we get a white page at the end of this test, I think?
+
             await driver.quit();
         } catch (err) {
             // hack to make this pass for Gitlab CI
